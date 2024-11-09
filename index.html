@@ -7,12 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 </head>
 <body>
-    <h1>TOFFEE Sports VIP Live Stream</h1>
+    <h1>SONY SPORTS TEN 3 HD</h1>
     <video id="video" controls width="600"></video>
 
     <script>
         const video = document.getElementById('video');
-        const streamURL = 'proxy.php';
+        const streamURL = 'proxy_sony.php';
 
         if (Hls.isSupported()) {
             const hls = new Hls();
@@ -22,7 +22,6 @@
                 video.play();
             });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            // For Safari (iOS/macOS)
             video.src = streamURL;
             video.addEventListener('loadedmetadata', function () {
                 video.play();
